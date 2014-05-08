@@ -74,7 +74,7 @@ package
 			score1.defaultTextFormat = format;
 			score2.defaultTextFormat = format;
 			
-			if (scorePlayer1 < 8)
+			if (scorePlayer1 < 7)
 			{
 				score1.text = scorePlayer1.toString();
 			}	
@@ -90,7 +90,7 @@ package
 				spielAnhalten();
 			}
 				
-			if (scorePlayer2 < 8)
+			if (scorePlayer2 < 7)
 			{
 				score2.text = scorePlayer2.toString();
 			}
