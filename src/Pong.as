@@ -161,7 +161,7 @@ package
 			neustart.defaultTextFormat = format;
 			neustart.width = 900;
 			neustart.height = 50;
-			neustart.x = stage.stageWidth / 2 - 110;
+			neustart.x = stage.stageWidth / 2 - 80;
 			neustart.y = stage.stageHeight / 2;
 			neustart.text = "AGAIN?";
 			addChild(neustart);
@@ -177,7 +177,6 @@ package
 			removeChild(neustart);
 			scorePlayer1 = 0;
 			scorePlayer2 = 0;
-			
 		}
 		
 		public function drawCircle(x:Number, y:Number):void
