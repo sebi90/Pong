@@ -64,7 +64,7 @@ package
 			positionY = speed * directionY + positionY;
 			drawEnemy(directionY);
 			
-			var format:TextFormat = new TextFormat(); 
+			 
 			format.color = 0xFFFFFF; 
 			format.size = 48; 
 			format.font = "OCR A Std";
