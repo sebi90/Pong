@@ -113,7 +113,7 @@ package
 				removeChild(circle);
 				removeChild(enemy);
 				positionX = 30;
-				positionY = 30;
+				positionY = Math.floor(Math.random() * 599 + 1);
 				directionX = 1;
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
@@ -131,7 +131,7 @@ package
 				removeChild(circle);
 				removeChild(enemy);
 				positionX = 30;
-				positionY = 30;
+				positionY = Math.floor(Math.random() * 599 + 1);;
 				directionX = 1;
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
