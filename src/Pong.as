@@ -172,6 +172,19 @@ package
 			addChild(neustart);
 			neustart.addEventListener(MouseEvent.CLICK, spielNeustarten);
 		}
+		
+		public function spielNeustarten(event:MouseEvent): void {
+			event.target.removeEventListener(MouseEvent.CLICK, spielNeustarten);
+			directionX = 1;
+			directionY = 1;
+			circle.visible = true;
+			removeChild(endscreen);
+			removeChild(neustart);
+			scorePlayer1 = 0;
+			scorePlayer2 = 0;
+			
+		}
+		
 		public function drawCircle(x:Number, y:Number):void
 		{
 			circle.graphics.clear();
