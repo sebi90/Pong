@@ -30,6 +30,7 @@ package
 		public var score2:TextField = new TextField;
 		public var endscreen:TextField = new TextField;
 		public var yPos:Number = stage.stageHeight / 2 - enemy.height /2;
+		public var random:Number=0;
 		
 		public function Pong()
 		{
@@ -64,7 +65,7 @@ package
 			positionX = speed * directionX + positionX;
 			positionY = speed * directionY + positionY;
 			trace(stage.stageHeight);
-			drawEnemy(directionY);
+			drawEnemy(positionY,directionY);
 			
 			var format:TextFormat = new TextFormat(); 
 			format.color = 0xFFFFFF; 
@@ -182,28 +183,17 @@ package
 			addChild(player);
 		}
 		
-		public function drawEnemy(y:Number):void
+		public function drawEnemy(posisionY:Number, directionY):void
 		{
 			
 			enemy.graphics.clear();
 			enemy.graphics.lineStyle(0);
 			enemy.graphics.beginFill(0xFFFFFF,1);
-			if ((y == 1) && ((yPos + 50) <= stage.stageHeight) )
-			{
-				if (positionX < stage.stageWidth / 2)
-					{
-						yPos = yPos+2;
-					}
-				if (positionX < stage.stageWidth / 3)
-					{
-						yPos = yPos+1;
-					}
-				else
-					{
-						yPos = yPos+4;	
-					}
-			}
-			if((y == -1) && (yPos >=0))
+			//if ((yPos + 50) <= stage.stageHeight )
+			//{
+			
+			//}
+			/*if((y == -1) && (yPos >=0))
 			{	
 				if (positionX < stage.stageWidth / 2)
 					{
@@ -218,9 +208,12 @@ package
 						yPos = yPos-4;
 					}
 				
-			}	
+			}*/	
 			
 			enemy.graphics.drawRect(stage.stageWidth - 10, yPos  , -10, 50);
+			random += Math.random() + directionY
+			yPos = positionY - (enemy.height / 2) + random;
+			trace(enemy.height);
 			enemy.graphics.endFill();
 			addChild(enemy);
 		}
