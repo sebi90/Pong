@@ -118,6 +118,7 @@ package
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
 				random = 0;
+				trace(0);
 			}
 			if (player.hitTestObject(circle))
 			{
