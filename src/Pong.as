@@ -14,11 +14,6 @@ package
 	[SWF(width="800", height="600", frameRate="60", backgroundColor="#000000")]
 	public class Pong extends Sprite
 	{
-		trace(0);
-		trace(1);
-		trace("fesio");
-		trace("test2");
-
 		public var player:Sprite = new Sprite()
 		public var enemy:Sprite = new Sprite()
 		public var circle:Sprite = new Sprite()
