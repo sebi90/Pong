@@ -51,9 +51,6 @@ package
 			player.hitArea = circle;
 			enemy.hitArea = circle;
 			
-			trace(player.hitArea);
-			trace(circle.hitArea);
-			
 		}
 		
 		public function timerHandler(event:TimerEvent):void
