@@ -159,6 +159,19 @@ package
 			drawPlayer(move.localY);
 		}
 		
+		public function spielAnhalten(): void {
+			directionX = 0;
+			directionY = 0;
+			circle.visible = false;
+			neustart.defaultTextFormat = format;
+			neustart.width = 900;
+			neustart.height = 50;
+			neustart.x = stage.stageWidth / 2 - 110;
+			neustart.y = stage.stageHeight / 2;
+			neustart.text = "Nochmal?";
+			addChild(neustart);
+			neustart.addEventListener(MouseEvent.CLICK, spielNeustarten);
+		}
 		public function drawCircle(x:Number, y:Number):void
 		{
 			circle.graphics.clear();
