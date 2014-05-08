@@ -210,36 +210,15 @@ package
 			addChild(player);
 		}
 		
-		public function drawEnemy(posisionY:Number, directionY):void
+		public function drawEnemy(posisionY:Number, directionY:Number):void
 		{
 			
 			enemy.graphics.clear();
 			enemy.graphics.lineStyle(0);
-			enemy.graphics.beginFill(0xFFFFFF,1);
-			//if ((yPos + 50) <= stage.stageHeight )
-			//{
-			
-			//}
-			/*if((y == -1) && (yPos >=0))
-			{	
-				if (positionX < stage.stageWidth / 2)
-					{
-						yPos = yPos-2;
-					}
-				if (positionX < stage.stageWidth / 3)
-					{
-						yPos = yPos-1;
-					}
-				else
-					{
-						yPos = yPos-4;
-					}
-				
-			}*/	
-			
+			enemy.graphics.beginFill(0xFFFFFF,1);			
 			enemy.graphics.drawRect(stage.stageWidth - 10, yPos  , -10, 50);
-			random += Math.random() + directionY
-			yPos = positionY - (enemy.height / 2) + random;
+			random += Math.random() * directionY
+			yPos = (positionY - (enemy.height / 2)); //+ random;
 			trace(enemy.height);
 			enemy.graphics.endFill();
 			addChild(enemy);
