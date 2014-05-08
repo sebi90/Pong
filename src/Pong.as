@@ -73,7 +73,7 @@ package
 			score1.defaultTextFormat = format;
 			score2.defaultTextFormat = format;
 			
-			if (scorePlayer1 < 1)
+			if (scorePlayer1 < 8)
 			{
 				score1.text = scorePlayer1.toString();
 			}	
@@ -82,13 +82,14 @@ package
 				endscreen.defaultTextFormat = format;
 				endscreen.width = 900;
 				endscreen.height = 50;
-				endscreen.x = stage.stageWidth / 2 - 50;
+				endscreen.x = stage.stageWidth / 2 - 200;
 				endscreen.y = stage.stageHeight / 2 - 50;
 				endscreen.text = "PLAYER 1 WINS";
 				addChild(endscreen);
+				spielAnhalten();
 			}
 				
-			if (scorePlayer2 < 1)
+			if (scorePlayer2 < 8)
 			{
 				score2.text = scorePlayer2.toString();
 			}
@@ -97,10 +98,11 @@ package
 				endscreen.defaultTextFormat = format;
 				endscreen.width = 900;
 				endscreen.height = 50;
-				endscreen.x = stage.stageWidth / 2 - 50;
+				endscreen.x = stage.stageWidth / 2 - 200;
 				endscreen.y = stage.stageHeight / 2 - 50;
 				endscreen.text = "PLAYER 2 WINS";
 				addChild(endscreen);
+				spielAnhalten();
 			}
 			
 			
