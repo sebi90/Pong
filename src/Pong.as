@@ -16,7 +16,7 @@ package
 	{
 		trace(0);
 		trace(1);
-		trace("Hallo");
+		trace("fesio");
 		public var player:Sprite = new Sprite()
 		public var enemy:Sprite = new Sprite()
 		public var circle:Sprite = new Sprite()
