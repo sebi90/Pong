@@ -62,7 +62,6 @@ package
 			//drawPlayer(playerPositionY);
 			positionX = speed * directionX + positionX;
 			positionY = speed * directionY + positionY;
-			trace(stage.stageHeight);
 			drawEnemy(directionY);
 			
 			var format:TextFormat = new TextFormat(); 
