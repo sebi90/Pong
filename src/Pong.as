@@ -63,12 +63,8 @@ package
 			//drawPlayer(playerPositionY);
 			positionX = speed * directionX + positionX;
 			positionY = speed * directionY + positionY;
-<<<<<<< HEAD
 			trace(stage.stageHeight);
 			drawEnemy(positionY,directionY);
-=======
-			drawEnemy(directionY);
->>>>>>> 0b1f16ce706757a7f9a3f5aefac5c87265240712
 			
 			 
 			format.color = 0xFFFFFF; 
