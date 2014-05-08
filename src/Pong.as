@@ -6,15 +6,11 @@ package
 	import flash.sensors.Accelerometer;
 	import flash.text.*;
 	import flash.utils.Timer;
-	
 	import flashx.textLayout.accessibility.TextAccImpl;
-	
-	
-	
+
 	[SWF(width="800", height="600", frameRate="60", backgroundColor="#000000")]
 	public class Pong extends Sprite
 	{
-		trace(0);
 		public var player:Sprite = new Sprite()
 		public var enemy:Sprite = new Sprite()
 		public var circle:Sprite = new Sprite()
@@ -66,7 +62,6 @@ package
 			trace(stage.stageHeight);
 			drawEnemy(positionY,directionY);
 			
-			 
 			format.color = 0xFFFFFF; 
 			format.size = 48; 
 			format.font = "OCR A Std";
@@ -105,7 +100,6 @@ package
 				addChild(endscreen);
 				spielAnhalten();
 			}
-			
 			
 		}
 		
@@ -169,7 +163,7 @@ package
 			neustart.height = 50;
 			neustart.x = stage.stageWidth / 2 - 110;
 			neustart.y = stage.stageHeight / 2;
-			neustart.text = "Nochmal?";
+			neustart.text = "AGAIN?";
 			addChild(neustart);
 			neustart.addEventListener(MouseEvent.CLICK, spielNeustarten);
 		}
