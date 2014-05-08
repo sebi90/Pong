@@ -29,6 +29,8 @@ package
 		public var score1:TextField = new TextField;
 		public var score2:TextField = new TextField;
 		public var endscreen:TextField = new TextField;
+		public var neustart:TextField = new TextField;
+		public var format:TextFormat = new TextFormat();
 		public var yPos:Number = stage.stageHeight / 2 - enemy.height /2;
 		
 		public function Pong()
