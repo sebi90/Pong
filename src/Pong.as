@@ -69,6 +69,8 @@ package
 			score1.defaultTextFormat = format;
 			score2.defaultTextFormat = format;
 			
+			random += Math.floor(Math.random() * 2) * directionY;
+			
 			if (scorePlayer1 < 7)
 			{
 				score1.text = scorePlayer1.toString();
@@ -132,7 +134,7 @@ package
 				removeChild(circle);
 				removeChild(enemy);
 				positionX = 30;
-				positionY = Math.floor(Math.random() * 599 + 1);;
+				positionY = Math.floor(Math.random() * 599 + 1);
 				directionX = 1;
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
@@ -141,9 +143,6 @@ package
 			if (enemy.hitTestObject(circle))
 			{
 				directionX = -1
-				random += Math.random() * directionY * 5;
-				trace(random);
-				
 			}
 			if ((positionY + circle.height / 2)>= stage.stageHeight)
 			{
@@ -223,7 +222,7 @@ package
 			}
 			if (yPos + enemy.height >= stage.stageHeight)
 			{
-				yPos = yPos + enemy.height;
+				yPos = stage.stageHeight - enemy.height;
 			}
 			//trace(enemy.height);
 			enemy.graphics.endFill();
