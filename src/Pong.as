@@ -59,7 +59,7 @@ package
 			//drawPlayer(playerPositionY);
 			positionX = speed * directionX + positionX;
 			positionY = speed * directionY + positionY;
-			trace(stage.stageHeight);
+			//trace(stage.stageHeight);
 			drawEnemy(positionY,directionY);
 			
 			format.color = 0xFFFFFF; 
@@ -117,6 +117,7 @@ package
 				directionX = 1;
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
+				random = 0;
 			}
 			if (player.hitTestObject(circle))
 			{
@@ -134,10 +135,14 @@ package
 				directionX = 1;
 				directionY = 1;
 				yPos = stage.stageHeight / 2 - enemy.height /2;
+				random = 0;
 			}
 			if (enemy.hitTestObject(circle))
 			{
 				directionX = -1
+				random += Math.random() * directionY * 5;
+				trace(random);
+				
 			}
 			if ((positionY + circle.height / 2)>= stage.stageHeight)
 			{
@@ -210,9 +215,16 @@ package
 			enemy.graphics.lineStyle(0);
 			enemy.graphics.beginFill(0xFFFFFF,1);			
 			enemy.graphics.drawRect(stage.stageWidth - 10, yPos  , -10, 50);
-			random += Math.random() * directionY
-			yPos = (positionY - (enemy.height / 2)); //+ random;
-			trace(enemy.height);
+			yPos = (positionY - (enemy.height / 2)) + random;
+			if (yPos <= 0)
+			{
+				yPos = 0;
+			}
+			if (yPos + enemy.height >= stage.stageHeight)
+			{
+				yPos = yPos + enemy.height;
+			}
+			//trace(enemy.height);
 			enemy.graphics.endFill();
 			addChild(enemy);
 		}
